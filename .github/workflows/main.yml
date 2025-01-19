@@ -68,7 +68,7 @@ jobs:
       - name: cache and up
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: cd /var/www/laravel && php artisan package:discover && php artisan vendor:publish --tag=config && php artisan view:cache && php artisan config:clear && php artisan config:cache && php artisan migrate && sudo chmod -R gu+w storage && sudo chmod -R guo+w storage && php artisan queue:restart && php artisan up
+          command: cd /var/www/laravel && php artisan package:discover && php artisan vendor:publish --tag=config && php artisan view:cache && php artisan config:clear && php artisan config:cache && php artisan migrate --force && sudo chmod -R gu+w storage && sudo chmod -R guo+w storage && php artisan queue:restart && php artisan up
           host: ${{ secrets.SSH_HOST }}
           username: root
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
