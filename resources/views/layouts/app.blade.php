@@ -4,8 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="description" content="Teacher Roisin is a professional English as a Second Language (ESL) teacher who is passionate about helping learners from all backgrounds improve their English skills.">
+        <meta name="keywords" content="ESL, English Teacher, Teacher Roisin">
+        <meta name="author" content="Teacher Roisin">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <title>{{ config('app.name', 'Teacher Roisin') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
