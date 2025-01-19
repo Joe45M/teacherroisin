@@ -1,0 +1,53 @@
+@import 'aos/dist/aos.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    @apply px-5 lg:px-0
+}
+
+.border-glow {
+    border: 10px solid rgb(104 91 249 / 9%);
+}
+
+.shadow-main {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.pulse {
+    animation: pulse 5s infinite;
+}
+
+.expand {
+    background-color: #3498db;
+    margin-top: 20px;
+    height: 3px;
+    width: 0;
+    animation: expand 8s ease-out forwards;
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 0px;
+    }
+    50% {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 10px;
+    }
+    100% {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 0px;
+    }
+}
