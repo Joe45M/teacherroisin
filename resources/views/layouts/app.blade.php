@@ -8,6 +8,7 @@
         <meta name="keywords" content="ESL, English Teacher, Teacher Roisin">
         <meta name="author" content="Teacher Roisin">
 
+        <link rel="icon" type="image/svg+xml" href="/images/icon.svg">
 
         <title>{{ config('app.name', 'Teacher Roisin') }}</title>
 
