@@ -36,6 +36,58 @@
 
     @endif
 
+    <div class="container mx-auto">
+        <div class="grid grid-cols-2 lg:grid-cols-7 mt-[-120px] mb-20 gap-5">
+            @if(!$user->assessment)
+                <a href="{{ config('app.stripe.10') }}?prefilled_email={{ $user->email }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+                    <div>
+                        <i class="fa-duotone text-5xl fa-solid mb-3 fa-pencil"></i>
+
+                        <div class="font-bold">
+                            {{ __('Take assessment') }}
+                        </div>
+                    </div>
+                </a>
+            @endif
+            <a href="{{ config('app.stripe.10') }}?prefilled_email={{ $user->email }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+                <div>
+                    <i class="fa-duotone text-5xl fa-solid mb-3 fa-cart-shopping"></i>
+
+                    <div class="font-bold">
+                        {{ __('Buy classes') }}
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('booking') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+                <div>
+                    <i class="fa-duotone text-5xl fa-solid mb-3 fa-calendar"></i>
+
+                    <div class="font-bold">
+                        {{ __('Book Classes') }}
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('profile.edit') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+                <div>
+                    <i class="fa-duotone text-5xl fa-solid mb-3 fa-cart-shopping"></i>
+
+                    <div class="font-bold">
+                        {{ __('Profile') }}
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('referrals') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+                <div>
+                    <i class="fa-duotone text-5xl fa-solid mb-3 fa-calendar-users"></i>
+
+                    <div class="font-bold">
+                        {{ __('Refer friends') }}
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
     <div class="py-12 mt-[-150px]">
         <div class="container mx-auto">
 
@@ -124,19 +176,6 @@
 
 
                 <div>
-                    <div class="mb-5">
-                        <x-card title="{{ __('Buy Lessons') }}">
-                            <p class="mb-3 text-text"></p>
-
-                            <a href="{{ config('app.stripe.10') }}?prefilled_email={{ $user->email }}" class="bg-nd-500 self-center items-center px-2 py-2 rounded-full flex gap-3 font-bold text-white">
-                                <div class="bg-nd-400 rounded-full w-8 relative h-8">
-                                    <i class="fa-solid fa-cart-shopping absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]"></i>
-                                </div>
-                                {{ __('Buy classes') }}
-                            </a>
-
-                        </x-card>
-                    </div>
 
                     <div class="mb-5">
                         <x-card title="{{ __('Your balance') }}">
