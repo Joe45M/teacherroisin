@@ -37,9 +37,9 @@
     @endif
 
     <div class="container mx-auto">
-        <div class="grid grid-cols-2 lg:grid-cols-7 mt-[-120px] mb-20 gap-5">
+        <div class="grid grid-cols-2 lg:grid-cols-7 mt-[-50px] mb-20 gap-5">
             @if(!$user->assessment)
-                <a href="{{ route('assessment') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+                <a href="{{ route('assessment') }}" class="text-center text-xs h-full w-full text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
                     <div>
                         <i class="fa-duotone text-5xl fa-solid mb-3 fa-pencil"></i>
 
@@ -49,7 +49,7 @@
                     </div>
                 </a>
             @endif
-            <a href="{{ config('app.stripe.10') }}?prefilled_email={{ $user->email }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+            <a href="{{ config('app.stripe.10') }}?prefilled_email={{ $user->email }}" class="text-center text-xs h-full w-full text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
                 <div>
                     <i class="fa-duotone text-5xl fa-solid mb-3 fa-cart-shopping"></i>
 
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ route('booking') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+            <a href="{{ route('booking') }}" class="text-center text-xs h-full w-full text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
                 <div>
                     <i class="fa-duotone text-5xl fa-solid mb-3 fa-calendar"></i>
 
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ route('profile.edit') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+            <a href="{{ route('profile.edit') }}" class="text-center text-xs h-full w-full text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
                 <div>
                     <i class="fa-duotone text-5xl fa-solid mb-3 fa-cart-shopping"></i>
 
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ route('referrals') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+            <a href="{{ route('referrals') }}" class="text-center text-xs h-full w-full text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
                 <div>
                     <i class="fa-duotone text-5xl fa-solid mb-3 fa-calendar-users"></i>
 
