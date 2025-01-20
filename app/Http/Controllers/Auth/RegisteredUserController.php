@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\ReferralTracker;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
@@ -42,6 +44,15 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        $ref = Cookie::get('ref');
+
+        if ($ref) {
+            $tracker = new ReferralTracker();
+            $tracker->referred_by_id = User::where('referral_code', $ref)->first()->id ?? 0;
+            $tracker->user_id = $user->id;
+            $tracker->save();
+        }
 
         event(new Registered($user));
 

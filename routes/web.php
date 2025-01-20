@@ -9,6 +9,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', \App\Livewire\Dashboard::class)->middleware(['auth', 'verified', SetLocale::class])->name('dashboard');
+Route::get('/dashboard/referrals', \App\Livewire\ReferralDashboard::class)->name('referrals');
+Route::get('/r/{ref}', [\App\Http\Controllers\ReferralController::class, 'setReferral'])->name('referral');
+
 
 Route::get('/assessment', \App\Livewire\Assessment::class)->middleware(['auth', 'verified', SetLocale::class])->name('assessment');
 
