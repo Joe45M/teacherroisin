@@ -39,7 +39,7 @@
     <div class="container mx-auto">
         <div class="grid grid-cols-2 lg:grid-cols-7 mt-[-120px] mb-20 gap-5">
             @if(!$user->assessment)
-                <a href="{{ config('app.stripe.10') }}?prefilled_email={{ $user->email }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
+                <a href="{{ route('assessment') }}" class="text-center text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
                     <div>
                         <i class="fa-duotone text-5xl fa-solid mb-3 fa-pencil"></i>
 
