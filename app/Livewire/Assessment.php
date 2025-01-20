@@ -8,6 +8,8 @@ use Livewire\Component;
 class Assessment extends Component
 {
 
+    public $begun = false;
+
     public $complete = false;
     public $questions = [
         [

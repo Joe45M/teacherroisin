@@ -33,13 +33,14 @@
         </div>
 
 
-        <div class="bg-white p-3 rounded-[12px]">
-            <h3 class="text-[32px] font-bold mb-5 text-text">All Students</h3>
+        <div class="bg-white p-3 rounded-[12px] flex justify-between mb-3 items-center">
+            <h3 class="text-[32px] font-bold text-text">All Students</h3>
+            <x-text-input wire:model.live="search" wire:keyup="searchUser" placeholder="Search Users"></x-text-input>
         </div>
 
 
 
-        <div class="relative overflow-x-auto">
+        <div class="relative overflow-y-auto">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                 <tr>
@@ -50,7 +51,7 @@
                         Completed assessment
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Classes taken
+                        Token
                     </th>
                     <th scope="col" class="px-6 py-3">
                         View
@@ -62,13 +63,13 @@
 
                     <tr class="bg-white">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                            {{ $user->name }}
+                            <livewire:student-link :student="$user"></livewire:student-link>
                         </th>
                         <td class="px-6 py-4">
                             {{ $user->assessment ? 'Yes' : 'No' }}
                         </td>
                         <td class="px-6 py-4">
-                            0
+                            {{ $user->balance }}
                         </td>
                         <td class="px-6 py-4">
                             <a href="{{ route('admin.view-student', $user->id) }}" class="text-brand-600 underline">View</a>

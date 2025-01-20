@@ -60,6 +60,14 @@
                             </a>
                         </div>
                         <div class="mb-5">
+
+
+                            @if(!auth()->user()->lessons()->untaken()->get()->sortBy('lesson_at')->count())
+                                <div class="text-gray-500">
+                                    {{ __('You have no upcoming lessons.') }}
+                                </div>
+                            @endif
+
                             <div class="grid gap-5 mt-5 lg:grid-cols-3">
 
                                 @foreach($todayLessons as $lesson)

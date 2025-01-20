@@ -75,7 +75,7 @@
                 </h1>
             </div>
         </header>
-        <div class="container mx-auto -mt-[60px] bg-white p-5 pt-32 rounded-[12px]">
+        <div class="container mx-auto -mt-[60px] bg-white mb-5 p-5 pt-32 rounded-[12px]">
 
             <div class="flex justify-center mb-10">
                 <i class="fa-sharp-duotone fa-solid fa-face-smile-hearts text-[80px] text-brand-500"></i>

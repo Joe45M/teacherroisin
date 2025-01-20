@@ -27,7 +27,7 @@
 
 
                 <div class="flex justify-center">
-                    <video class="rounded-3xl border-[10px] border-white mt-10 lg:mt-0" controls width="250">
+                    <video class="rounded-3xl border-[10px] border-white mt-10 lg:mt-0 rounded-[12px]" controls width="250">
 
                         <source src="/video/bannerVideo.mp4.mp4" type="video/mp4" />
 
