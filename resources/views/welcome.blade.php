@@ -25,6 +25,15 @@
                     </div>
                 </div>
 
+
+                <div class="flex justify-center">
+                    <video class="rounded-3xl border-[10px] border-white mt-10 lg:mt-0" controls width="250">
+
+                        <source src="/video/bannerVideo.mp4.mp4" type="video/mp4" />
+
+                    </video>
+                </div>
+                </div>
             </div>
             <div
                 data-aos="fade-up" data-aos-delay="800"
