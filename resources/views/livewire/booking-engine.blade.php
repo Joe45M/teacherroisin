@@ -67,6 +67,16 @@
                                 <div>{{ $selected->count() }}</div>
                             </div>
                         </div>
+
+                        @if($insuffient)
+
+                            <div class="bg-red-100 flex justify-between px-3 items-center rounded-md py-4 pt-3">
+                                {{ __('You do not have enough tokens.') }}
+                                <a class="px-5 py-3 rounded-md bg-black/10" href="{{ config('app.stripe.10') }}?prefilled_email={{ auth()->user()->email }}">{{ __('Buy Class Tokens') }}</a>
+                            </div>
+
+                        @endif
+
                         <div class="flex justify-end mt-10">
                             <x-button wire:click="confirmBooking">{{ __('Confirm Booking') }}</x-button>
 

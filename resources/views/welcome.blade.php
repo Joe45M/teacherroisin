@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div
-                data-aos="fade-up" data-aos-delay="800"
+                data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200"
                 class="mt-10 bg-white/20 rounded-[20px] p-10 grid lg:grid-cols-3 lg:px-16">
                 <div>
                     <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">

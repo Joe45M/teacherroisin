@@ -16,6 +16,7 @@ class BookingEngine extends Component
 
     public Collection $selected;
 
+    public $insuffient = false;
     public $booked = false;
 
     public function mount()
@@ -46,7 +47,11 @@ class BookingEngine extends Component
 
 
         if (Auth::user()->balance < $this->selected->count()) {
-            dd('no tokens');
+            $this->insuffient = true;
+
+            return;
+        } else {
+            $this->insuffient = false;
         }
 
         $token = new Token();

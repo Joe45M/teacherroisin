@@ -50,9 +50,9 @@
 
 
                     <div class="bg-white shadow-main rounded-[12px] p-5 rounded-[12px]">
-                        <div class="flex justify-between">
+                        <div class="lg:flex justify-between">
                             <h3 class="text-[32px] font-bold mb-5 text-text">{{ __('Upcoming lessons') }}</h3>
-                            <a href="{{ route('booking') }}" class="bg-nd-500 self-center items-center px-2 py-2 rounded-full flex gap-3 font-bold text-white">
+                            <a href="{{ route('booking') }}" class="bg-nd-500 mb-5 lg:mb-0 self-center items-center px-2 py-2 rounded-full flex gap-3 font-bold text-white">
                                 <div class="bg-nd-400 rounded-full w-8 relative h-8">
                                     <i class="fa-solid fa-cart-shopping absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]"></i>
                                 </div>
@@ -128,7 +128,7 @@
                         <x-card title="{{ __('Buy Lessons') }}">
                             <p class="mb-3 text-text"></p>
 
-                            <a href="{{ config('app.stripe.10') }}" class="bg-nd-500 self-center items-center px-2 py-2 rounded-full flex gap-3 font-bold text-white">
+                            <a href="{{ config('app.stripe.10') }}?prefilled_email={{ $user->email }}" class="bg-nd-500 self-center items-center px-2 py-2 rounded-full flex gap-3 font-bold text-white">
                                 <div class="bg-nd-400 rounded-full w-8 relative h-8">
                                     <i class="fa-solid fa-cart-shopping absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]"></i>
                                 </div>
