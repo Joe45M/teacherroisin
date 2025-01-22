@@ -24,3 +24,6 @@ Route::get('/admin/calendar', \App\Livewire\AdminCalendarPage::class)
 
 Route::get('/admin/classes', \App\Livewire\Admin\ClassList::class)
     ->name('admin.class-list');
+
+Route::get('/admin/transactions', \App\Livewire\Admin\AdminTransactions::class)
+    ->name('admin.transactions');

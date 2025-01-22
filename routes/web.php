@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/dashboard', \App\Livewire\Dashboard::class)->middleware(['auth', 'verified', SetLocale::class])->name('dashboard');
-Route::get('/dashboard/referrals', \App\Livewire\ReferralDashboard::class)->name('referrals');
+Route::get('/dashboard/referrals', \App\Livewire\ReferralDashboard::class)->middleware(['auth', 'verified', SetLocale::class])->name('referrals');
 Route::get('/r/{ref}', [\App\Http\Controllers\ReferralController::class, 'setReferral'])->name('referral');
 
 
@@ -26,6 +26,7 @@ Route::post('/stripe/', [\App\Http\Controllers\StripePaymentController::class, '
 
 Route::view('/privacy', 'privacy')->middleware(['auth', 'verified', SetLocale::class])->name('privacy');
 Route::view('/cookie', 'cookie')->middleware(['auth', 'verified', SetLocale::class])->name('cookie');
+Route::get('/pricing', \App\Livewire\Pricing::class)->name('pricing');
 
 
 require __DIR__.'/auth.php';

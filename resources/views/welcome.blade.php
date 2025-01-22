@@ -35,49 +35,50 @@
                 </div>
                 </div>
             </div>
-            <div
-                data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200"
-                class="mt-10 bg-white/20 rounded-[20px] p-10 grid lg:grid-cols-3 lg:px-16">
-                <div>
-                    <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
-                        <i class="fa-duotone fa-solid fa-hourglass-start text-[32px]"></i>
-                        <div>
-                            <div class="flex text-[32px] font-bold">
-                                <p id="count-first">5000</p> +
+            <div class="mb-10 pb-10">
+                <div
+                    data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200"
+                    class="mt-10 bg-white/20 container mx-auto rounded-[20px] p-10 grid lg:grid-cols-3 lg:px-16">
+                    <div>
+                        <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
+                            <i class="fa-duotone fa-solid fa-hourglass-start text-[32px]"></i>
+                            <div>
+                                <div class="flex text-[32px] font-bold">
+                                    <p id="count-first">5000</p> +
+                                </div>
+                                <p class="text-[18px]">{{ __('Classes taught') }}</p>
                             </div>
-                            <p class="text-[18px]">{{ __('Classes taught') }}</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
+                            <i class="fa-regular fa-face-smile-relaxed fa-hourglass-start text-[32px]"></i>
+                            <div>
+
+                                <div class="flex text-[32px] font-bold">
+                                    <p id="count-second">500</p> +
+                                </div>
+                                <p class="text-[18px]">{{ __('Students taught') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
+                            <i class="fa-duotone fa-solid fa-earth-americas text-[32px]"></i>
+                            <div>
+                                <div class="flex text-[32px] font-bold">
+                                    <p id="count-third">10</p> +
+                                </div>
+                                <p class="text-[18px]">{{ __('Countries educated') }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
-                        <i class="fa-regular fa-face-smile-relaxed fa-hourglass-start text-[32px]"></i>
-                        <div>
-
-                            <div class="flex text-[32px] font-bold">
-                                <p id="count-second">500</p> +
-                            </div>
-                            <p class="text-[18px]">{{ __('Students taught') }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
-                        <i class="fa-duotone fa-solid fa-earth-americas text-[32px]"></i>
-                        <div>
-                            <div class="flex text-[32px] font-bold">
-                                <p id="count-third">10</p> +
-                            </div>
-                            <p class="text-[18px]">{{ __('Countries educated') }}</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-
     <div class="mb-10" data-aos="fade-up" data-aos-delay="1200">
         <div class="container mx-auto pt-10">
             <div class="bg-gradient-to-r from-nd-500 to-nd-300 p-10 rounded-[12px] grid-flow-row lg:flex gap-10">
@@ -166,21 +167,58 @@
         </div>
     </div>
 
-    <div class="bg-nd-500 py-32">
-        <div class="lg:max-w-4xl mx-auto">
-            <div class="">
-                <div>
-                    <h3 class="lg:text-[52px] font-bold text-white mb-0 text-center">{{ __('Start learning') }}</h3>
-                    <h3 class="text-[32px] text-white mb-4 font-bold text-center">
-                        {{ __('Contact Teacher Roisin') }}
-                    </h3>
+
+
+    <div class="bg-cover flex flex-col justify-between bg-center min-h-[60vh] bg-fixed py-10 relative" style="background-image: url({{ asset('/images/home-creds.jpg') }});">
+        <div class="bg-gradient-to-b from-black/50 via-transparent to-black/50 absolute top-0 w-full h-full left-0 z-0"></div>
+        <div class="z-10 relative">
+            <h3 class="text-[32px] font-bold text-white text-center z-10">
+                Certified Teacher
+            </h3>
+        </div>
+        <div
+            data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200"
+            class="grid lg:grid-cols-3 lg:px-16">
+            <div>
+                <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
+                    <i class="fa-duotone fa-solid fa-shield-halved text-[32px]"></i>
+                    <div>
+                        <div class="flex text-[32px] font-bold">
+                            <p id="count-first">5000</p> +
+                        </div>
+                        <p class="text-[18px]">{{ __('Classes taught') }}</p>
+                    </div>
                 </div>
+            </div>
 
-                <img src="{{ asset('images/wechat.png') }}" class="rounded-[20px] lg:w-1/2 mx-auto" alt="Wechat url">
+            <div>
+                <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
+                    <i class="fa-regular fa-face-smile-relaxed fa-hourglass-start text-[32px]"></i>
+                    <div>
 
+                        <div class="flex text-[32px] font-bold">
+                            <p id="count-second">500</p> +
+                        </div>
+                        <p class="text-[18px]">{{ __('Students taught') }}</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex mb-10 lg:mb-0 items-center text-white gap-5">
+                    <i class="fa-duotone fa-solid fa-earth-americas text-[32px]"></i>
+                    <div>
+                        <div class="flex text-[32px] font-bold">
+                            <p id="count-third">10</p> +
+                        </div>
+                        <p class="text-[18px]">{{ __('Countries educated') }}</p>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
+
+    @include('vanity.contact')
 
     <div class="bg-brand-500 py-16">
         <h3 class="text-center mb-10 text-[32px] text-white font-bold">

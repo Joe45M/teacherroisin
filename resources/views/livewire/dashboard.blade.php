@@ -69,7 +69,7 @@
             </a>
             <a href="{{ route('profile.edit') }}" class="text-center text-xs h-full w-full text-white flex items-center  rounded-[22px] justify-center p-10 aspect-square bg-pink-400">
                 <div>
-                    <i class="fa-duotone text-5xl fa-solid mb-3 fa-cart-shopping"></i>
+                    <i class="fa-duotone text-5xl fa-solid mb-3 fa-user"></i>
 
                     <div class="font-bold">
                         {{ __('Profile') }}

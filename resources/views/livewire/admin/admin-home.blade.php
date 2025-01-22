@@ -10,6 +10,8 @@
 
             <a href="{{ route('admin.class-list') }}" class="text-brand-500 mb-5 inline-block underline">Manage classes</a>
 
+            <a href="{{ route('admin.transactions') }}" class="text-brand-500 mb-5 inline-block underline">Manage transactions</a>
+
         </div>
 
 
@@ -61,9 +63,9 @@
                 <tbody>
                 @foreach($users as $user)
 
-                    <tr class="bg-white">
+                    <tr class="bg-white" key="{{ rand(2,50000) }}">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                            <livewire:student-link :student="$user"></livewire:student-link>
+                            <livewire:student-link :key="rand(2,50000)" :student="$user"></livewire:student-link>
                         </th>
                         <td class="px-6 py-4">
                             {{ $user->assessment ? 'Yes' : 'No' }}
